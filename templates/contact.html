@@ -67,12 +67,13 @@
         </div>
     
     <!-- description div -->
-    <div class="py-3 text-slate-300 font-mono md:text-justify text-sm">
-        I'm Shiva.
-A future mechanical engineer. Design aficionado. An Artist. A coder, too.
-<br><br>
-To improve my skillset and put my Python and HTML knowledge to use, I created this GPA calculator online application.
-</div>
+    <div class="py-2 space-y-3 text-slate-300 font-mono md:text-justify text-sm">
+        <p>I'm Shiva.</p>
+        <p>A future mechanical engineer. Design aficionado. An Artist. A coder, too.</p>
+        <p>To improve my skillset and put my Python and HTML knowledge to use, I created this GPA calculator online application.
+        </p>
+    </div>
+    <hr class="text-slate-300">
 
     <!-- connect links -->
     <div class="">
@@ -80,21 +81,21 @@ To improve my skillset and put my Python and HTML knowledge to use, I created th
         <div class="py-3 text-slate-200 text-xl md:text-xl font-bold">
             Get in touch with me,
         </div>
-        <div class="text-sm text-slate-300 font-mono space-y-3 px-10">
+        <div class="text-sm text-slate-300 font-mono space-y-3 md:px-10">
             <p class="">
-                Text me on WhatsApp.
+                Text me on <a target="_blank" href="https://wa.me/+919538486239"><b><u>WhatsApp</u></b> </a>
             </p>
             <p class="">
-                Or Write me an e-mail.
+                Or Write me an <a target="_blank" href="mailto:shivakrao122000@gmail.com"><b><u>E-mail</u></b></a>
             </p>
             <p class="#">
                 Connect with me on LinkedIn. 
             </p>
-            <p class="">
+            <p class="pb-2">
                 Or, on a completely random note, follow me on Pinterest.
             </p>
         </div>
-
+        <hr class="text-slate-300">
         <div class="mt-4 pt-4">
             <p class="text-slate-300 font-mono text-sm">
                 You can find out more details about the project on the about page
@@ -103,7 +104,7 @@ To improve my skillset and put my Python and HTML knowledge to use, I created th
                 <!-- heading -->
                 <div class="flex flex-col">
                     <div class="text-slate-300 text-sm py-1 font-mono">
-                        Visit the about page
+                        Visit about page
                     </div>
                     <!-- end buutons -->
                         <button onclick="location.href='{% url 'about' %}'" class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">About
@@ -111,8 +112,8 @@ To improve my skillset and put my Python and HTML knowledge to use, I created th
                               src="{% static 'GPA/about.svg' %}" alt="">
                           </button>
                 </div>
-                <div class="flex flex-col py-1">
-                    <div class="text-lg text-slate-300 font-mono">
+                <div class="flex flex-col">
+                    <div class="text-slate-300 text-sm py-1 font-mono">
                         or go back
                     </div>
                         <button onclick="location.href='{% url 'home' %}'" class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">Home

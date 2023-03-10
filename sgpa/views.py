@@ -9,6 +9,12 @@ def sgpa_home(request):
 def sem_01(request):
     return render(request, 'sgpa/sem01.html')
 
+def sem_02(request):
+    return render(request, 'sgpa/sem02.html')
+
+def sem_03(request):
+    return render(request, 'sgpa/sem03.html')
+
 def go_home(request):
     return redirect('/')
 

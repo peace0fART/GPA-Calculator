@@ -151,25 +151,26 @@
         are styled with <strong>TailwindCSS</strong> with some
         <strong>JavaScript</strong> written for additional functionality.
         <br /><br />
+        <hr class="text-slate-300" />
 
-        <div>
+        <div class="py-3">
           You can find the source code for the project on my Github Repo
           <br /><br />
           <p class="text-blue-200">*Repo link*</p>
         </div>
       </div>
+      <hr class="text-slate-300" />
 
       <!-- connect links -->
       <div class="grid grid-cols-2 gap-3 py-3">
         <!-- heading -->
         <div class="flex flex-col">
-          <div class="text-slate-300 text-sm font-mono py-1">
-            Get in touch with me,
-          </div>
+          <div class="text-slate-300 text-sm font-mono py-1">Get in touch,</div>
           <!-- end buutons -->
           <button
             onclick="location.href='{% url 'contact' %}'"
-            class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">
+            class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded"
+          >
             Contact
             <img
               class="h-10 w-10"
@@ -182,11 +183,11 @@
           <div class="text-sm text-slate-300 font-mono py-1">or go back</div>
           <button
             onclick="location.href='{% url 'home' %}'"
-            class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">
+            class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-lg md:text-xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded"
+          >
             Home
             <img class="h-10 w-10" src="{% static 'GPA/about.svg' %}" alt="" />
           </button>
-
         </div>
       </div>
       <!-- main div end -->

@@ -1,0 +1,85 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  {% tailwind_css %}
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-slate-700">
+
+  <div class="px-3 py-2">
+    <svg class="text-white w-10 h-10 mr-3 my-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      fill="currentColor" className="w-6 h-6">
+      <path fillRule="evenodd"
+        d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+        clipRule="evenodd" />
+      <path
+        d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+    </svg>
+  </div>
+  <div class="px-10 py-10 mx-5 md:mx-20 flex justify-center flex-col">
+    <!-- main div -->
+    <div class="flex flex-col">
+      <!-- title div -->
+      <div class="text-white text-5xl md:text-6xl font-bold">GPA Calculator.</div>
+    </div>
+    <div class="text-slate-200 text-sm font-mono">
+      Welcome to GPA Calculator.
+    </div>
+    <div class="text-slate-200 text-sm font-mono">
+      Compute your VTU Grades.
+    </div>
+
+    <div class="mt-3 md:mt-5">
+      <div
+        class="container px-4 md:px-6 pb-[40px] pt-3 md:pt-5 bg-slate-800 mx-auto w-auto h-[240px] md:h-[270px] rounded drop-shadow-md space-y-3">
+
+        <!-- buttons div -->
+        <div class="flex space-x-3 justify-around">
+
+          <div type="submit" onclick="location.href='{% url 'sgpa_home' %}'" class="h-40 w-40 flex flex-col shadow cursor-pointer hover:shadow-lg">
+            <img class="rounded-t-lg" src="{% static 'GPA/sgpa-boxed.png' %}"
+              alt="">
+            <div class="bg-slate-600 text-slate-200 px-2 py-2 font-mono text-sm mb:text-md rounded-b-lg mb-10">
+              Calculate GPA for your current semester
+            </div>
+          </div>
+
+          <div type="submit" onclick="location.href='{% url 'sgpa_home' %}'" class="h-45 w-40 flex flex-col cursor-pointer">
+                <img class="rounded-t-lg cursor-pointer" src="{% static 'GPA/cgpa-boxed.png' %}"
+                  alt="">
+
+            <div class="bg-slate-600 text-slate-200 px-2 py-2 font-mono text-sm md:text-md rounded-b-lg">
+              Find out net GPA of all your semesters
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {% load static %}
+      <div class="flex flex-col md:grid md:grid-cols-2 md:gap-5 space-y-3 md:space-y-0 py-3 md:py-5">
+        <button onclick="location.href='{% url 'about' %}'" class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-xl md:text-2xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">About
+          <img class="h-10 w-10 md:h-20 md:w-20"
+            src="{% static 'GPA/about.svg' %}" alt="">
+        </button>
+
+        <button onclick="location.href='{% url 'contact' %}'" class="bg-indigo-500 flex justify-around items-center px-3 py-2 text-xl md:text-2xl text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">Contact
+          <img class="h-10 w-10 md:h-20 md:w-20"
+            src="./static/GPA/contact.svg" alt="">
+        </button>
+      </div>
+
+
+      <!-- main div ends -->
+    </div>
+
+</body>
+
+</html>

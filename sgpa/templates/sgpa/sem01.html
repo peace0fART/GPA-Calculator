@@ -1,0 +1,177 @@
+{% load static tailwind_tags %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  {% tailwind_css  %}
+  
+  <script src="{% static 'sgpa/myscript.js' %}"></script>
+  <title>SGPA-Semester 01</title>
+</head>
+<body class="bg-slate-700">
+    <nav class="bg-gray-800 sticky top-0 left-0 right-0 z-10">
+        <div>
+        <div class="flex max-w-6xl mx-2 px-2 py-1 items-center justify-between shadow">
+            <!-- main div -->
+            <div class="flex items-center space-x-4">
+         <div class=" flex items-center text-white">
+             <!-- title -->
+            <svg class="w-9 h-9 mr-3 my-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clipRule="evenodd" />
+  <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
+</svg>
+          <strong>GPA Calculator</strong> 
+         </div>
+            <div class="hidden md:flex items-center">
+                <!-- primary -->
+                <a class="text-white hover:text-gray-200 hover:font-bold hover:bg-slate-900 px-4 py-2 mx-1 my-1 rounded" href='{% url "go_home" %}'>Home</a>
+                <a class="text-white hover:text-gray-200 hover:font-bold hover:bg-slate-900 px-4 py-2 mx-1 my-1 rounded" href="{% url 'go_cgpa' %}">CGPA</a>
+                <a class="text-white hover:text-gray-200 hover:font-bold hover:bg-slate-900 px-2 py-2 mx-1 my-1 rounded" href="{% url 'go_sgpa' %}">SGPA</a>
+                <a class="text-white hover:text-gray-200 hover:font-bold hover:bg-slate-900 px-2 py-2 mx-1 my-1 rounded" href="{% url 'go_contact' %}">Contact</a>
+                <a class="text-white hover:text-gray-200 hover:font-bold hover:bg-slate-900 px-2 py-2 mx-1 my-1 rounded" href="{% url 'go_about' %}">About</a>
+            </div>
+            </div>
+            <div class="md:hidden flex items-center">
+                <!-- secondary -->
+                <button class="menu-btn hover:bg-slate-900 rounded hover:font-bold">
+                <svg class=" text-white w-10 h-10 py-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+  <path fillRule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm8.25 5.25a.75.75 0 01.75-.75h8.25a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75z" clipRule="evenodd" />
+</svg>
+</button>
+            </div>
+            </div>
+            
+            <!-- mobile menu starts here -->
+            <div class="mobile-menu hidden transition-all duration-2000 ease-out">
+            <div class="grid grid-cols-2  px-4 py-1 rounded pb-2">
+                <a class="text-slate-100 hover:font-bold hover:bg-slate-600 hover:shadow px-1 py-2 rounded" href="{% url 'go_home' %}">Home</a>
+                <a class="text-slate-200 hover:font-bold hover:bg-slate-600 hover:shadow px-1 py-2 rounded" href="{% url 'go_contact' %}">Contact</a>
+                <a class="text-slate-100 hover:font-bold hover:bg-slate-600 hover:shadow px-1 py-2 rounded" href="{% url 'go_sgpa' %}">SGPA</a>
+                <a class="text-slate-200 hover:font-bold hover:bg-slate-600 hover:shadow px-1 py-2 rounded" href="{% url 'go_about' %}">About</a>
+                <a class="text-slate-100 hover:font-bold hover:bg-slate-600 hover:shadow px-1 py-2 rounded" href="{% url 'go_cgpa' %}">CGPA</a>
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+
+<!-- main div start -->
+<div class="px-5 py-5 md:px-44 md:mx-10 flex flex-col md:justify-center">
+   <!-- title div --> 
+   <div class="flex items-center justify-center">
+       <div>
+       <div class="text-md md:text-xl text-right md:text-left text-slate-200 px-3">
+           Compute SGPA
+       </div>
+       <div class="text-3xl md:text-5xl text-right text-slate-100 font-bold px-3">
+           Semester 01
+       </div>
+       </div>
+       <div class="">
+           <img class="h-28 w-28 md:h-40 md:w-40" src="{% static 'sgpa/sem_calculate.svg' %}" alt="">
+       </div>
+       <!-- title div ends -->
+   </div>
+   
+   <!-- input elements -->
+   <div class="md:px-5 py-5">
+       <!-- heading -->
+       <div class="flex justify-center text-slate-300 text-sm md:text-lg ml-3 md:ml-6 py-3 md:py-5">
+           Enter each subject marks below.
+       </div>
+       
+       <!-- input elements start -->
+       
+       <div class="flex flex-col items-center justify-center md:flex-row md:justify-around ">
+       <!-- for the right ones -->
+       <div>
+           
+       <div>
+     <!-- just an empty div (let it be) -->
+       </div>    
+       <div class="text-slate-200">
+       <span class="mr-3">18xx11</span>
+       <input required class="m1 rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m1" id="mark1">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx12</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m2" id="mark2">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx13</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m3" id="mark3">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx14</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m4" id="mark4">
+       </div>
+       
+       
+       <!-- right ones end -->
+       </div>
+       <div>
+           <!-- left ones start -->
+       <div class="text-slate-200">
+       <span class="mr-3">18xx15</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m6" id="mark5">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx16</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m7" id="mark6">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx17</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m8" id="mark7">
+       </div>
+       
+       <div class="text-slate-200">
+       <span class="mr-3">18xx18</span>
+       <input required class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2" type="number" name="m9" id="mark8">
+       </div>
+       <!-- left ones end -->
+       </div>
+       
+  </div>     
+       
+       <!-- submit button -->
+       <div onclick="submit()" class="py-3 md:py-2 px-3 md:px-5 grid">
+           <button class="bg-indigo-500 px-3 py-2 text-md md:text-lg text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded">Submit</button>
+       </div>
+       
+   </div>
+   
+   <!-- result div -->
+   <div class="bg-slate-100 px-3 py-2 flex rounded-lg items-center mx-3 md:mx-10 justify-center">
+       <img class="h-28 w-28 md:h-40 md:w-40" src="{% static 'sgpa/sgpa_res.svg' %}" alt="">
+       <div class="flex flex-col">
+       <div class="px-3 md:px-5 text-slate-600 font-mono text-sm">
+           Your SGPA is,
+       </div>
+       <div class="text-slate-800 font-mono text-xl md:text-5xl font-bold px-4 md:px-5" id="result" >
+          6.76
+       </div>
+       </div>
+   </div>
+   
+   <!-- main div ends -->
+</div>
+
+<script>
+      const btn = document.querySelector('button.menu-btn');
+      const menu = document.querySelector('.mobile-menu');
+    
+    <!-- event listener -->  
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+    
+  </script>    
+</body>
+</html>

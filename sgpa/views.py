@@ -15,6 +15,21 @@ def sem_02(request):
 def sem_03(request):
     return render(request, 'sgpa/sem03.html')
 
+def sem_04(request):
+    return render(request, 'sgpa/sem04.html')
+
+def sem_05(request):
+    return render(request, 'sgpa/sem05.html')
+
+def sem_06(request):
+    return render(request, 'sgpa/sem06.html')
+
+def sem_07(request):
+    return render(request, 'sgpa/sem07.html')
+
+def sem_08(request):
+    return render(request, 'sgpa/sem08.html')
+
 def go_home(request):
     return redirect('/')
 

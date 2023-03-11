@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('sgpa_home/', include('sgpa.urls'),name='sgpa_home'),
+    path('cgpa', include('cgpa.urls'), name='cgpa' ),
     path('__reload__/', include("django_browser_reload.urls")),
     path('about/', views.about, name="about"),
     path('contact/', views.contact, name='contact'),
@@ -28,5 +29,5 @@ urlpatterns = [
     path('about/', views.go_about, name='go_about'),
     path('contact/', views.go_contact, name='go_contact'),
     path('sgpa_home/', views.go_sgpa, name='go_sgpa'),
-    path('cgpa', views.go_sgpa, name='go_cgpa'),
+    path('cgpa/', views.go_sgpa, name='go_cgpa'),
 ]

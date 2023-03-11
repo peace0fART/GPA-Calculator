@@ -7,8 +7,8 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     {% tailwind_css %}
 
-    <script src="{% static 'sgpa/myscript03.js' %}"></script>
-    <title>SGPA-Semester 03</title>
+    <script src="{% static 'cgpa/cgpa_script.js' %}"></script>
+    <title>CGPA</title>
   </head>
   <body class="bg-slate-700">
     <nav class="bg-gray-800 sticky top-0 left-0 right-0 z-10">
@@ -128,12 +128,12 @@
           <div
             class="text-md md:text-xl text-right md:text-left text-slate-200 px-3"
           >
-            Compute SGPA
+            Compute 
           </div>
           <div
             class="text-3xl md:text-5xl text-right text-slate-100 font-bold px-3"
           >
-            Semester 03
+          CGPA
           </div>
         </div>
         <div class="">
@@ -152,7 +152,7 @@
         <div
           class="flex justify-center text-slate-300 text-sm md:text-lg ml-3 md:ml-6 py-3 md:py-5"
         >
-          Enter each subject marks below.
+          Enter each semester SGPA below.
         </div>
 
         <!-- input elements start -->
@@ -166,7 +166,7 @@
               <!-- just an empty div (let it be) -->
             </div>
             <div class="text-slate-200">
-              <span class="mr-3">18xx31</span>
+              <span class="mr-3">Sem 01</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -177,7 +177,7 @@
             </div>
 
             <div class="text-slate-200">
-              <span class="mr-3">18xx32</span>
+              <span class="mr-3">Sem 02</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -188,7 +188,7 @@
             </div>
 
             <div class="text-slate-200">
-              <span class="mr-3">18xx33</span>
+              <span class="mr-3">Sem 03</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -199,7 +199,7 @@
             </div>
 
             <div class="text-slate-200">
-              <span class="mr-3">18xx34</span>
+              <span class="mr-3">Sem 04</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -209,8 +209,13 @@
               />
             </div>
 
+
+            <!-- right ones end -->
+          </div>
+          <div>
+            <!-- left ones start -->
             <div class="text-slate-200">
-              <span class="mr-3">18xx35</span>
+              <span class="mr-3">Sem 05</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -219,13 +224,9 @@
                 id="mark5"
               />
             </div>
-            <!-- right ones end -->
-          </div>
-          <div>
-            <!-- left ones start -->
-
+            
             <div class="text-slate-200">
-              <span class="mr-3">18xx36</span>
+              <span class="mr-3">Sem 06</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -236,7 +237,7 @@
             </div>
 
             <div class="text-slate-200">
-              <span class="mr-3">18xx37</span>
+              <span class="mr-3">Sem 07</span>
               <input
                 required
                 class="rounded-t-sm w-auto px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
@@ -247,24 +248,13 @@
             </div>
 
             <div class="text-slate-200">
-              <span class="mr-3">18xx38</span>
+              <span class="mr-3">Sem 08</span>
               <input
                 required
                 class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
                 type="number"
                 name="m9"
                 id="mark8"
-              />
-            </div>
-
-            <div class="text-slate-200">
-              <span class="mr-3">18xx39</span>
-              <input
-                required
-                class="rounded-t-sm px-2 py-1 border-b-4 border-indigo-500 text-slate-800 bg-slate-200 my-2"
-                type="number"
-                name="m9"
-                id="mark9"
               />
             </div>
 
@@ -293,7 +283,7 @@
         />
         <div class="flex flex-col">
           <div class="px-3 md:px-5 text-slate-600 font-mono text-sm">
-            Your SGPA is,
+            Your CGPA is,
           </div>
           <div
             class="text-slate-800 font-mono text-xl md:text-5xl font-bold px-4 md:px-5"

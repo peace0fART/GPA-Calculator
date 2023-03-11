@@ -12,7 +12,7 @@ function submit() {
   const grade_pt = [
     Math.ceil(m1 / 10) * 3,
     Math.ceil(m2 / 10) * 4,
-    Math.ceil(m3 / 10) * 3,
+    Math.ceil(m3 / 10) * 4,
     Math.ceil(m4 / 10) * 3,
     Math.ceil(m5 / 10) * 3,
     Math.ceil(m6 / 10) * 3,
@@ -25,7 +25,7 @@ function submit() {
   grade_pt.forEach((ele) => {
     sum += ele;
   });
-  let sgpa = sum / 24;
+  let sgpa = sum / 25;
 
   document.getElementById("result").innerHTML = sgpa;
   //res.classList.toggle('hidden');

@@ -7,18 +7,16 @@ function submit() {
   let m6 = document.getElementById("mark6").value;
   let m7 = document.getElementById("mark7").value;
   let m8 = document.getElementById("mark8").value;
-  let m9 = document.getElementById("mark9").value;
 
   const grade_pt = [
-    Math.ceil(m1 / 10) * 3,
+    Math.ceil(m1 / 10) * 4,
     Math.ceil(m2 / 10) * 4,
-    Math.ceil(m3 / 10) * 3,
+    Math.ceil(m3 / 10) * 4,
     Math.ceil(m4 / 10) * 3,
     Math.ceil(m5 / 10) * 3,
-    Math.ceil(m6 / 10) * 3,
+    Math.ceil(m6 / 10) * 2,
     Math.ceil(m7 / 10) * 2,
     Math.ceil(m8 / 10) * 2,
-    Math.ceil(m9 / 10) * 1,
   ];
 
   let sum = 0;

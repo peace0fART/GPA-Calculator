@@ -26,6 +26,6 @@ let  m8 = document.getElementById('mark8').value;
   
   document.getElementById('result').innerHTML = sgpa;
 //res.classList.toggle('hidden');
-alert('haha');
+// alert('haha');
 }
 

@@ -24,6 +24,7 @@ function submit() {
     sum += ele;
   });
   let sgpa = sum / 24;
+  sgpa = sgpa.toFixed(2);
 
   document.getElementById("result").innerHTML = sgpa;
   //res.classList.toggle('hidden');

@@ -18,6 +18,7 @@ function submit() {
     sum += ele;
   });
   let sgpa = sum / 18;
+  sgpa = sgpa.toFixed(2);
 
   document.getElementById("result").innerHTML = sgpa;
   //res.classList.toggle('hidden');

@@ -27,6 +27,7 @@ function submit() {
   });
   let sgpa = sum / 25;
 
+  sgpa =  sgpa.toFixed(2);
   document.getElementById("result").innerHTML = sgpa;
   //res.classList.toggle('hidden');
   // alert("haha");

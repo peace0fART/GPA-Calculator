@@ -7,7 +7,7 @@
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     {% tailwind_css %}
 
-    <script src="{% static 'sgpa/myscript07.js' %}"></script>
+    <script src="{% static 'sgpa/myscript08.js' %}"></script>
     <title>SGPA-Semester 08</title>
   </head>
   <body class="bg-slate-700">
@@ -125,14 +125,10 @@
       <!-- title div -->
       <div class="flex items-center justify-center">
         <div>
-          <div
-            class="text-md md:text-xl   md:text-left text-slate-200 px-3"
-          >
+          <div class="text-md md:text-xl md:text-left text-slate-200 px-3">
             Compute SGPA
           </div>
-          <div
-            class="text-3xl md:text-5xl   text-slate-100 font-bold px-3"
-          >
+          <div class="text-3xl md:text-5xl text-slate-100 font-bold px-3">
             Semester 08
           </div>
         </div>
@@ -225,11 +221,21 @@
         </div>
 
         <!-- submit button -->
-        <div onclick="submit()" class="py-3 md:py-2 px-3 md:px-5 grid max-w-6xl">
+        <div
+          class="py-3 md:py-2 px-3 md:px-5 grid grid-cols-1 md:grid-cols-2 gap-3"
+        >
           <button
+            onclick="submit()"
             class="bg-indigo-500 px-3 py-2 text-md md:text-lg text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded"
           >
             Submit
+          </button>
+
+          <button
+            onclick="reset()"
+            class="bg-indigo-500 px-3 py-2 text-md md:text-lg text-slate-100 hover:bg-indigo-600 hover:text-white hover:shadow hover:font-bold rounded"
+          >
+            Reset
           </button>
         </div>
       </div>
@@ -250,9 +256,7 @@
           <div
             class="text-slate-800 font-mono text-xl md:text-5xl font-bold px-4 md:px-5"
             id="result"
-          >
-            
-          </div>
+          ></div>
         </div>
       </div>
 

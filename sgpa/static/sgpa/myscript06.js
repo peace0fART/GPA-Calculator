@@ -30,3 +30,16 @@ function submit() {
   //res.classList.toggle('hidden');
   // alert("haha");
 }
+
+function reset() {
+  document.getElementById("mark1").value = '';
+  document.getElementById("mark2").value = '';
+  document.getElementById("mark3").value = '';
+  document.getElementById("mark4").value = '';
+  document.getElementById("mark5").value = '';
+  document.getElementById("mark6").value = '';
+  document.getElementById("mark7").value = '';
+  document.getElementById("mark8").value = '';
+
+  // alert('Reset');
+}

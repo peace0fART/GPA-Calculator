@@ -4,6 +4,6 @@
 
 @layer base {
   ul, ol {
-    list-style: revert;
+    list-style: disc;
   }
 }

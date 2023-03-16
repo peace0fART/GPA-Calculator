@@ -41,5 +41,7 @@ function reset() {
   document.getElementById("mark6").value = '';
   document.getElementById("mark7").value = '';
   document.getElementById("mark8").value = '';
+  document.getElementById("result").innerHTML = '';
+
   // alert('Reset');
 }

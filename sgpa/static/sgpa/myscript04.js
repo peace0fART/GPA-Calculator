@@ -43,6 +43,8 @@ function reset() {
   document.getElementById("mark7").value = '';
   document.getElementById("mark8").value = '';
   document.getElementById("mark9").value = '';
+  document.getElementById("result").innerHTML = '';
+
 
   // alert('Reset');
 }

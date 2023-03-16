@@ -31,5 +31,7 @@ function reset() {
   document.getElementById("mark3").value = '';
   document.getElementById("mark4").value = '';
   document.getElementById("mark5").value = '';
+  document.getElementById("result").innerHTML = '';
+
   // alert('Reset');
 }

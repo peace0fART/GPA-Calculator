@@ -37,7 +37,8 @@ function submit() {
   }
   cgpa = cgpa.toFixed(2);
   document.getElementById("result").innerHTML = cgpa;
-  document.getElementById("result").focus
+  let res = document.getElementsByClassName('res_box');
+  res.focus();
 
   // alert('haha');
 }
@@ -51,5 +52,7 @@ function reset() {
   document.getElementById("mark6").value = '';
   document.getElementById("mark7").value = '';
   document.getElementById("mark8").value = '';
+  document.getElementById("result").innerHTML = '';
+
   // alert('Reset');
 }
